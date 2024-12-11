@@ -12,7 +12,7 @@ body {
     align-items: center;
     height: 94vh;
     background-color:darkgreen;
-    background-image: url('ifmt.png');
+    background-image: url('if.png');
     margin: 0px;
     padding: 11%;
     flex-direction: row;
@@ -24,10 +24,8 @@ body {
 
 /* Container principal */
 .container {
-        background-color: rgb(87, 209, 118);
         padding: 22px;
         border-radius: 14px;
-        box-shadow: 0 2px 10px white;
         width: 436px; /* Largura fixa para o formulário */
 }
 
@@ -116,7 +114,6 @@ button {
     display: inline-block;
     width: 100%;
     padding: 10px;
-    background: linear-gradient(rgb(11, 100, 48));
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
