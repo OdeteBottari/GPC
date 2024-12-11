@@ -10,4 +10,5 @@ document.getElementById('form-inscricao').addEventListener('submit', function(ev
     
     // Limpar o formulário
     this.reset();
+
 });
