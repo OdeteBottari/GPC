@@ -1,73 +1,65 @@
 * {
-    margin: 0;
+    margin: 1%;
     padding: 0;
     box-sizing: border-box;
-
+    text-align: center;
 }
 
 /* Estilos do corpo */
 body {
-    font-family: Arial, sans-serif;
     display: flex;
+    font-family: Arial, sans-serif;
     align-items: center;
-    height: 94vh;
-    background-color:darkgreen;
-    background-image: url('if.png');
-    margin: 0px;
-    padding: 11%;
-    flex-direction: row;
+    margin: 50px;
+    color: #ffffff;
     align-content: space-around;
     justify-content: center;
+    background: #367560;
+    margin-top: 20px;
+    background-image: url('ifmt2024.jpg');
 }
-
 
 
 /* Container principal */
 .container {
         padding: 22px;
         border-radius: 14px;
-        width: 436px; /* Largura fixa para o formulário */
+        width: 80vw; /* Largura fixa para o formulário */
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
 }
-
 
 
 .container h1 {
     text-align: center;    
     font-family: Arial, sans-serif;   
-    max-width: 50px;
-    
+    margin-top: 60px;
 }
 
 
 .form-group {
-    background-color: #fff;
+    background-color: #33887a;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgb(250, 246, 246);
-    width: 300px; /* Largura fixa para o formulário */
+    width: 80vw; /* Largura fixa para o formulário */
+
 }
 
 
 .form-group label {
     text-align: center;
-    margin-bottom: 29px;
     font-family: Arial, sans-serif;
     border-radius: 8px;
     max-width: 113px;
     width: 48%;
-    padding: 2%;
     text-align: left;
 }
 
 .form-group a {
     text-align: center;
-    margin-bottom: 29px;
     font-family: Arial, sans-serif;
-    color:rgb(0, 0, 0);
-    border-radius: 6px;
-    max-width: 259px;
-    width: 154%;
-    padding: 2%;
+    color:rgb(255, 252, 252);
+    text-align: center;
 }
 
 /* Título */
@@ -75,6 +67,9 @@ h1 {
     font-size: 45px;
     margin-bottom: 30px;
     text-align: center;
+    margin-top: 80%;
+
+
 }
 
 h2 {
@@ -104,7 +99,7 @@ label {
 input[type="text"],
 input[type="password"], input[type='email'] {
     padding: 10px;
-    border: 1px solid #ccc; /* Borda cinza clara */
+    border: 1px solid rgb(80, 179, 80); /* Borda cinza clara */
     border-radius: 4px; /* Bordas arredondadas */
     margin-bottom: 15px; /* Espaçamento entre os campos */
 }
@@ -114,13 +109,14 @@ button {
     display: inline-block;
     width: 100%;
     padding: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     align-items: center;
     border-radius: 28px;
+    background-color: #54c785;
 }
 
 
@@ -131,7 +127,8 @@ button:hover {
 /* Link para recuperação de senha */
 a {
     text-align: center;
-    color: #000000; /* Azul padrão para links */
+    color: rgb(104, 135, 175); /* Azul padrão para links */
+    
     text-decoration: none; /* Remove o sublinhado do link */
 }
 
