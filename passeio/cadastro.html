@@ -42,7 +42,7 @@ function setSubCategoria(age) {
     let subCategoria = '';
     
     if (age <= 11) subCategoria = 'Infantil';
-    else if (age <= 14) subCategoria = 'Infanto Juvenil';
+    else if (age <= 14) subCategoria = 'Infantil Juvenil';
     else if (age <= 18) subCategoria = 'Juvenil';
     else if (age <= 30) subCategoria = 'Adulto 1';
     else if (age <= 40) subCategoria = 'Adulto 2';
@@ -62,15 +62,6 @@ function loadDataForEditing(birthDateString) {
     calculateAge();
 }
 
-    document.getElementById("registrationForm").addEventListener("submit", function(e) {
-        const senha = document.getElementById("senha").value;
-        const confirmarSenha = document.getElementById("confirmar_senha").value;
-
-    if (senha !== confirmarSenha) {
-        e.preventDefault();
-        alert("As senhas não coincidem.");
-    }
-});
 
     
     </script>
