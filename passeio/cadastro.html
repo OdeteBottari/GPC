@@ -1,216 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro do Participante</title>
+    <title>Tabela Exemplo</title>
     <link rel="stylesheet" href="rostosite.css">
-
+    
     <script>
+    
+function calculateAge() {
+    const birthDateInput = document.getElementById('datanascimento').value;
+    const birthDate = new Date(birthDateInput);
+    
+    // Validar se a data é válida
+    if (isNaN(birthDate.getTime())) {
+        alert("Por favor, insira uma data válida.");
+        return;
+    }
+    
+    const today = new Date();
+    
+    // Verificar se a data de nascimento é no futuro
+    if (birthDate > today) {
+        alert("A data de nascimento não pode ser no futuro.");
+        return;
+    }
 
-        function calculateAge() {
-            const birthDateInput = document.getElementById('datanascimento').value;
-            const birthDate = new Date(birthDateInput);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    
+    // Ajustar idade se o aniversário ainda não ocorreu este ano
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    
+    document.getElementById('idade').value = age;
+    setSubCategoria(age);
+}
 
-            // Validar se a data é válida
-            if (isNaN(birthDate.getTime())) {
-                alert("Por favor, insira uma data válida.");
-                return;
-            }
+function setSubCategoria(age) {
+    let subCategoria = '';
+    
+    if (age <= 11) subCategoria = 'Infantil';
+    else if (age <= 14) subCategoria = 'Infantil Juvenil';
+    else if (age <= 18) subCategoria = 'Juvenil';
+    else if (age <= 30) subCategoria = 'Adulto 1';
+    else if (age <= 40) subCategoria = 'Adulto 2';
+    else if (age <= 50) subCategoria = 'Senior 1';
+    else if (age <= 60) subCategoria = 'Senior 2';
+    else if (age <= 70) subCategoria = 'Senior 3';
+    else subCategoria = 'Master';
+    
+    document.getElementById('SubCategoria').value = subCategoria;
+}
 
-            const today = new Date();
-
-            // Verificar se a data de nascimento é no futuro
-            if (birthDate > today) {
-                alert("A data de nascimento não pode ser no futuro.");
-                return;
-            }
-
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const monthDifference = today.getMonth() - birthDate.getMonth();
-
-            // Ajustar idade se o aniversário ainda não ocorreu este ano
-            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-
-            document.getElementById('idade').value = age;
-            setSubCategoria(age);
-        }
-
-        function setSubCategoria(age) {
-            let subCategoria = '';
-
-            if (age <= 11) subCategoria = 'Infantil';
-            else if (age <= 14) subCategoria = 'Infanto Juvenil';
-            else if (age <= 18) subCategoria = 'Juvenil';
-            else if (age <= 30) subCategoria = 'Adulto 1';
-            else if (age <= 40) subCategoria = 'Adulto 2';
-            else if (age <= 50) subCategoria = 'Senior 1';
-            else if (age <= 60) subCategoria = 'Senior 2';
-            else if (age <= 70) subCategoria = 'Senior 3';
-            else subCategoria = 'Master';
-
-            document.getElementById('SubCategoria').value = subCategoria;
-        }
-
-        // Chame esta função ao carregar dados para edição
-        function loadDataForEditing(birthDateString) {
-            document.getElementById('datanascimento').value = birthDateString;
-
-            // Calcular idade e definir SubCategoria com base na data de nascimento carregada
-            calculateAge();
-        }
-
-        document.getElementById("registrationForm").addEventListener("submit", function (e) {
-            const senha = document.getElementById("senha").value;
-            const confirmarSenha = document.getElementById("confirmar_senha").value;
-
-            if (senha !== confirmarSenha) {
-                e.preventDefault();
-                alert("As senhas não coincidem.");
-            }
-        });
+// Chame esta função ao carregar dados para edição
+function loadDataForEditing(birthDateString) {
+    document.getElementById('datanascimento').value = birthDateString;
+    
+    // Calcular idade e definir SubCategoria com base na data de nascimento carregada
+    calculateAge();
+}
 
 
+    
     </script>
 
-
+    
     <style>
         table {
             width: fit-content;
             border-collapse: collapse;
-            align-content: center;
+            align-content:center;
         }
-
-        th,
-        td {
+        th, td {
             /*border: 1px solid black;*/
             padding: 10px;
             width: 36%;
-
+            
         }
-
         a {
             visibility: hidden;
         }
-
-        h1 {
+        h1{
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
         }
+
     </style>
 
 </head>
 
 <body>
 
-    <table>
+<table>
 
-        <form method="post" action="inscricao.php" id="registrationForm">
-            <tr>
-                <td colspan="8">
-                    <footer>
-                        <div class="container3">
-                            <h1> Usuário</h1>
-                            <button1>
-                        </div>
-                    </footer>
-                </td>
-            </tr></br>
-
-            <td colspan="5">
-                <h1> Faça sua inscrição para Passeio Ciclístico - IFMT</h1>
-            </td>
-
-            <tr><br>
-
-                <td colspan="2">
-
-                    <div class="container">
-                        <h2>CADASTRO</h2>
-                        <form id="CADASTROForm">
-                            <div class="form-group">
-                                <label for="nome">Nome Completo:</label>
-                                <input type="text" id="nome" name="nome" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="sexo">Sexo:</label>
-                                <select id="sexo" name="sexo" required>
-                                    <option>----</option>
-                                    <option value="Femenino">Femenino</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Binario">Binario</option>
-                                </select>
-                            </div>
+    <form method="post" action="inscricao.php" id="registrationForm">
+    <td><br><a>..............................</a></br></td>
+    <td><br><a>................</a></br></td>
+   
+    <tr>
+        <td colspan="8"><footer>
+            <div class="container3">
+            <h1> Usuário</h1>
+            <button1>
+                <i class="fas fa-thumbs-up"></i> <img src = './images.jpg';>
+                <i class="fas fa-thumbs-up"></i> <img src = './images.png';>
+              </button1>
+            </div>
+            </footer></td>
+    </tr></br>
+    
+    <td colspan="5"><h1><a>...</a>Faça sua inscrição para Passeio Ciclístico - IFMT</h1></td>
 
 
-                            <div class="form-group">
-                                <label for="email">E-mail: </label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
+    
+    <tr><br>
+        
+        <td><div class="container6">
+            <i class="fas fa-thumbs-up"></i> <img src = './download (1).jpg';><br><a>..</a></br>
+        </div></td>
 
-                            <div class="form-group">
-                                <label for="telefone">Telefone:</label>
-                                <input type="text" id="telefone" name="telefone" required placeholder="(65) 99999-9999">
-
-
-                                <div class="form-group">
-                                    <label for="cpf">Cpf:</label>
-                                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="datanascimento">Data de Nascimento:</label>
-                                    <input type="date" id="datanascimento" name="datanascimento"
-                                        onchange="calculateAge()" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="idade">Idade:</label>
-                                    <input type="number" id="idade" name="idade" onchange="calculateAge()" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="categoria">Categoria</label>
-                                    <select id="categoria" name="categoria" required>
-                                        <option value="  ">
-                                            <title>----</title>
-                                        </option>
-                                        <option value="Aluno IFMT">ALUNO IFMT</option>
-                                        <option value="Professor IFMT">PROFESSOR IFMT</option>
-                                        <option value="Servidor IFMT">Servidor IFMT</option>
-                                        <option value="Comunidade Geral">Comunidade Geral</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="SubCategoria">SubCategoria</label>
-                                    <input type="text" id="SubCategoria" name="SubCategoria"
-                                        onchange="setSubCategoria()" required>
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label> Leu as regras e aceita os termos para participar do evento?</label>
-                                    <label><input type="radio" id="aceito" name="termo" value="1">Sim</label>
-                                    <label><input type="radio" id="naoaceito" name="termo" value="0">Não</label>
-                                </div>
-
-                                <div>
-
-                                    <button type="submit" class="btn">Enviar</button>
-
-                                </div>
-
-                        </form>
+        
+        <td colspan="2">
+            
+            <div class="container">
+                <h2>CADASTRO</h2>
+                <form id ="CADASTROForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
                     </div>
-                </td>
-            </tr>
-        </form>
-    </table>
-</body>
+                    
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label><a>.............................................................</a>
+                        <select id="sexo" name="sexo" required>
+                            <option>----</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Binario">Binario</option>
+                        </select>
+                    </div>
+        
+        
+                    <div class="form-group">
+                        <label for="email">E-mail: </label><a>.....................................</a>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label><a>.....................................</a>
+                        <input type="text" id="telefone" name="telefone" required placeholder="(65) 99999-9999">
+        
+        
+                    <div class="form-group">
+                        <label for="cpf">Cpf:</label><a>...........................................</a>
+                        <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="datanascimento">Data de Nascimento:</label><a>.................................</a>
+                        <input type="date" id="datanascimento" name="datanascimento" onchange="calculateAge()" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="idade">Idade:</label><a>..............................</a>
+                        <input type="number" id="idade" name="idade" onchange="calculateAge()" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label><a>............................</a>
+                        <select id="categoria" name="categoria" required>
+                            <option value="  "><title>----</title></option>
+                            <option value="Aluno IFMT">ALUNO IFMT</option>
+                            <option value="Professor IFMT">PROFESSOR IFMT</option>
+                            <option value="Servidor IFMT">Servidor IFMT</option>
+                            <option value="Comunidade Geral">Comunidade Geral</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SubCategoria">SubCategoria</label><a>............................</a>
+                        <input type="text" id="SubCategoria" name="SubCategoria" onchange="setSubCategoria()" required>
+                            
+                    </div>
+        
+                    <br/>
+                    
+                    <div class="form-group">
+                        <label> Leu as regras e aceita os termos para participar do evento?<a>..............................</a> </label>
+                        <label><input type="radio" id="aceito" name="termo" value="1">Sim</label>
+                        <label><input type="radio" id="naoaceito" name="termo" value="0">Não</label>
+                    </div>
+        
+                    <br/>
+                    
+                    <div>
+
+
+                    <a>..............................................</a>
+                    
+                    <button type="submit" class="btn">Enviar</button>
+
+                    </div>
+
+                </form>
+            </div>
+        
+            <form>
+                <div class="container5">
+                    <button2>
+                        <i class="fas fa-thumbs-up"></i> <img src = './images (1).jpg';>
+                    </button2>
+                        </div>
+            </form>
+        </body>
+        </html></td></br>
+
+        <td><div class="container7">
+            <i class="fas fa-thumbs-up"></i> <img src = './download.jpg';>
+        </div></td>
+        
+    </tr>
+    <tr>
+       
+        <td><br><a>................</a></br></td>
+    </tr>
+    
+</form>
+
+</table>
+<br><a>.................................</a><br>
+</body>
 </html>
