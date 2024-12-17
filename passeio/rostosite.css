@@ -4,21 +4,35 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
     margin: 0;
-    background: linear-gradient(#70582c,#D6AD60,#B68D40,#70582c);
     flex-direction: column;
     padding: 5%;
+    background-image: url('ifmt2024.jpg');
 }
 
 input[type="text"],
 select {
   width: 65%;
-    padding-block: 1px;
+    padding-block: 5px;
     padding-inline: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 40px;
+  /* Faz com que os elementos ocupem toda a largura do contêiner pai */
+  /* Adiciona preenchimento interno para melhor aparência */
+  /* Inclui o preenchimento e a borda na largura total */
+  /* Borda padrão */
+  /* Bordas arredondadas */
+}
+
+input[type="number"],
+select {
+  width: 65%;
+    padding-block: 5px;
+    padding-inline: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 40px;
   /* Faz com que os elementos ocupem toda a largura do contêiner pai */
   /* Adiciona preenchimento interno para melhor aparência */
   /* Inclui o preenchimento e a borda na largura total */
@@ -29,11 +43,11 @@ select {
 input[type="date"],
 select {
   width: 65%;
-    padding-block: 1px;
+    padding-block: 5px;
     padding-inline: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 40px;
   /* Faz com que os elementos ocupem toda a largura do contêiner pai */
   /* Adiciona preenchimento interno para melhor aparência */
   /* Inclui o preenchimento e a borda na largura total */
@@ -44,11 +58,11 @@ select {
 input[type="email"],
 select {
   width: 65%;
-    padding-block: 1px;
-    padding-inline: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding-block: 5px;
+  padding-inline: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 40px;
   /* Faz com que os elementos ocupem toda a largura do contêiner pai */
   /* Adiciona preenchimento interno para melhor aparência */
   /* Inclui o preenchimento e a borda na largura total */
@@ -64,8 +78,7 @@ select {
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;    
 }
 
 .container6 img {
@@ -98,7 +111,6 @@ select {
 }
 
 footer {
-    font-family: Arial, sans-serif;
     flex-direction: column-reverse;
     display: flex;
     justify-content: flex-end;
@@ -109,37 +121,14 @@ footer {
     
 }
 
-.container3 img {
-    max-width:40px;
-    max-height:50px;
-    width: auto;
-    height: auto;
-    padding: 1px;
-    border-radius: 25px;
-    box-shadow: 0 0 100px rgba(155, 155, 155, 0.96);
-    background: rgb(0, 0, 0);
-}
-
 .container h1 {
     text-align: center;
     margin-bottom: 29px;
     font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(#c08f33,#e6b967);
-    border-radius: 28px;
+    border-radius: 280px;
     max-width: 400px;
     width: 200%;
     
-}
-
-.container5 img {
-    max-width:40px;
-    max-height:50px;
-    width: auto;
-    height: auto;
-    padding: 1px;
-    border-radius: 25px;
-    box-shadow: 0 0 100px rgba(155, 155, 155, 0.96);
-    background: rgb(0, 0, 0);
 }
 
 .container5 {
@@ -150,90 +139,69 @@ footer {
     max-width: 280px;
     width: 280%;
     margin: 1vh;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     align-content: center;
-    background: linear-gradient(#c08f33, rgb(255, 228, 76),rgb(175, 159, 65))
 }
 
 .container3 {
-        background: rgb(241, 231, 172);
-        padding: 1px;
-        border-radius: 23px;
-        box-shadow: 0 0 100px rgb(255 255 255 / 96%);
-        max-width: 990px;
-        width: 990%;
-        margin: 2vh;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        align-content: center;
-        background: linear-gradient(#c08f33, rgb(255, 228, 76),rgb(175, 159, 65))
+  padding: 1px;
+  border-radius: 23px;
+  max-width: 990px;
+  width: 990%;
+  margin: 0.0005%;
+  font-family: 'Courier New', Courier, monospace;
+  display: contents;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-content: center;
 }
 
 .container {
-    background: white;
-    padding: 10px;
-    border-radius: 28px;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.959);
-    max-width: 300px;
-    width: 200%;
+  opacity: 80%;
+  background: green;
+  padding: 10px;
+  border-radius: 28px;
+  max-width: 300px;
 }
 
 .container h2 {
-    text-align: center;
-    margin-bottom: 29px;
-    font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(rgb(255, 228, 76),#e6b967);
-    border-radius: 28px;
-    max-width: 300px;
-    width: 200%;
-}
-
-.form-gruop {
-    margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 29px;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(#367560);
+  border-radius: 28px;
+  max-width: 300px;
+  width: 200%;
 }
 
 .form-gruop label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+  border-radius: 40px;
 }
 
 .form-gruop input {
-    width: 95%;
-    padding: 10px;
-    border:  1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-gruop input:focus {
-    border-color: #F4EBD0;
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .btn {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(#F4EBD0);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .btn:hover {
-    background: linear-gradient(#D6AD60,#B68D40);
+  background: linear-gradient(#367560);
 }
-
-
-
 
 .dropdown {
     width: 300px;
@@ -286,7 +254,6 @@ footer {
     left: 0;
     width: 100%;
     height: fit-content;
-    background: white;
     margin-top: 10px;
     border-radius: 2mm;
     overflow: hidden;
@@ -325,11 +292,6 @@ footer {
     background: rgba(0, 0, 0, 0.08);
   }
 
-  input:checked + label {
-    color: #D6AD60;
-    background: rgb(238, 245, 252);
-  }
-
   input:checked + label::before {
     content: "done";
     font-family: Arial, sans-serif;
@@ -341,7 +303,7 @@ footer {
   }
 
   .open {
-    outline: 0.7mm solid #B68D40;
+    outline: 0.7mm solid #367560;
   }
 
   .title {
@@ -368,20 +330,12 @@ footer {
     font-family: Arial, sans-serif;
   }
 
-  #search:focus {
-    outline: 0.5mm solid rgba(0, 0, 0, 0.35);
-  }
-
-.form-gruop input:focus {
-    border-color:#D6AD60;
-}
 
 .btn {
     display: inline-block;
     width: 100%;
     padding: 10px;
-    background: linear-gradient(rgb(255, 228, 76),#D6AD60,#c79332);
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -391,7 +345,7 @@ footer {
 }
 
 .btn:hover {
-    background: linear-gradient(#bba863,#D6AD60,#c79332);
+    background: linear-gradient(#367560);
 }
 
 
@@ -438,10 +392,7 @@ footer {
     content: "<";
   }
 
-  .input-box:empty::after {
-    content: "----";
-    color: rgba(0, 0, 0, 0.5);
-  }
+ 
 
   .list {
     position: absolute;
@@ -488,8 +439,8 @@ footer {
   }
 
   input:checked + label {
-    color: #ad812e;
-    background: rgb(238, 245, 252);
+    color: #367560;
+    background: rgb(14, 50, 85);
   }
 
   input:checked + label::before {
@@ -503,7 +454,7 @@ footer {
   }
 
   .open {
-    outline: 0.7mm solid #ce9732;
+    outline: 0.7mm solid #367560;
   }
 
   .title {

@@ -8,13 +8,11 @@
 /* Estilos do corpo */
 body {
     display: flex;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     align-items: center;
     margin: 50px;
-    color: #ffffff;
     align-content: space-around;
     justify-content: center;
-    background: #367560;
     margin-top: 20px;
     background-image: url('ifmt2024.jpg');
 }
@@ -22,11 +20,11 @@ body {
 
 /* Container principal */
 .container {
-        padding: 22px;
-        border-radius: 14px;
-        width: 80vw; /* Largura fixa para o formulário */
-        margin-top: 20px;
-        color: rgb(0, 0, 0);
+    padding: 22px;
+    border-radius: 14px;
+    width: 80vw; /* Largura fixa para o formulário */
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -58,7 +56,6 @@ body {
 .form-group a {
     text-align: center;
     font-family: Arial, sans-serif;
-    color:rgb(255, 252, 252);
     text-align: center;
 }
 
@@ -100,7 +97,7 @@ input[type="text"],
 input[type="password"], input[type='email'] {
     padding: 10px;
     border: 1px solid rgb(80, 179, 80); /* Borda cinza clara */
-    border-radius: 4px; /* Bordas arredondadas */
+    border-radius: 40px; /* Bordas arredondadas */
     margin-bottom: 15px; /* Espaçamento entre os campos */
 }
 

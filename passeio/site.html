@@ -12,11 +12,11 @@
         <h1>Passeio Ciclístico </h1>
         <nav>
             <ul>
-                <li><a href="./loginpart.html">Área do participante</a></li>
-                <li><a href="./login.html">Admin</a></li>
-                <li><a href="./avaliacao.html">Avalição do passeio ciclistico</a></li>
-                <li><a href="./avalia.html">Avalição do site</a></li>
-                <li><a href="./cadastro.html">cadastro</a></li>
+                <li><a href="./loginpart.html">Área do Participante</a></li>
+                <li><a href="./login.html">Área do Administrador</a></li>
+                <li><a href="./avaliacao.html">Avalição do Passeio Ciclístico</a></li>
+                <li><a href="./avalia.html">Avalição do Site</a></li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
 
 
             </ul>
@@ -42,8 +42,15 @@
         <p>Email: contato@passeiociclistico.com.br</p>
     </footer>
 </div>
-    
-
     <script src="site.js"></script>
+    <script>
+        document.getElementById('logout').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            // Aqui você pode adicionar a lógica para deslogar o usuário
+            alert('Você foi deslogado com sucesso!, volte sempre');
+            // Redirecionar para a página inicial ou login
+            window.location.href = './site.html'; // Altere para a página que deseja redirecionar
+        });
+        </script>
 </body>
 </html>

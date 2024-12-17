@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela Exemplo</title>
+    <title>Inscrição do usuário</title>
     <link rel="stylesheet" href="rostosite.css">
     
     <script>
@@ -69,14 +69,15 @@ function loadDataForEditing(birthDateString) {
     
     <style>
         table {
-            width: fit-content;
+            width:auto;
             border-collapse: collapse;
             align-content:center;
+            border: 10px;
         }
-        th, td {
-            /*border: 1px solid black;*/
-            padding: 10px;
-            width: 36%;
+        th {
+            
+            width: 700%;
+            font-family: 'Courier New', Courier, monospace;
             
         }
         a {
@@ -84,7 +85,7 @@ function loadDataForEditing(birthDateString) {
         }
         h1{
             text-align: center;
-            font-family: 'Courier New', Courier, monospace;
+            font-family:'Courier New', Courier, monospace;
         }
 
     </style>
@@ -93,49 +94,30 @@ function loadDataForEditing(birthDateString) {
 
 <body>
 
-<table>
+
 
     <form method="post" action="inscricao.php" id="registrationForm">
-    <td><br><a>..............................</a></br></td>
-    <td><br><a>................</a></br></td>
-   
-    <tr>
-        <td colspan="8"><footer>
+
+
             <div class="container3">
-            <h1> Usuário</h1>
-            <button1>
-                <i class="fas fa-thumbs-up"></i> <img src = './images.jpg';>
-                <i class="fas fa-thumbs-up"></i> <img src = './images.png';>
-              </button1>
+            <a> style="opacity: 90%; background-color: green;"</a>
+            <h1 style="color: white">Faça sua inscrição para o Passeio Ciclístico - IFMT</h1>
             </div>
-            </footer></td>
-    </tr></br>
-    
-    <td colspan="5"><h1><a>...</a>Faça sua inscrição para Passeio Ciclístico - IFMT</h1></td>
-
-
-    
-    <tr><br>
-        
-        <td><div class="container6">
-            <i class="fas fa-thumbs-up"></i> <img src = './download (1).jpg';><br><a>..</a></br>
-        </div></td>
-
-        
-        <td colspan="2">
-            
-            <div class="container">
+    <div style="display: flex;">
+            <div style="flex: 2" style="flex: 2;"></div>
+            <div class="container" style="flex: 2;">
                 <h2>CADASTRO</h2>
                 <form id ="CADASTROForm">
+                    
                     <div class="form-group">
                         <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" name="nome" required>
-                    </div>
+                    
                     
                     <div class="form-group">
-                        <label for="sexo">Sexo:</label><a>.............................................................</a>
+                        <label for="sexo">Sexo:</label>
                         <select id="sexo" name="sexo" required>
-                            <option>----</option>
+                            <option>---------------</option>
                             <option value="Femenino">Femenino</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Binario">Binario</option>
@@ -144,92 +126,67 @@ function loadDataForEditing(birthDateString) {
         
         
                     <div class="form-group">
-                        <label for="email">E-mail: </label><a>.....................................</a>
+                        <label for="email">E-mail: </label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="telefone">Telefone:</label><a>.....................................</a>
+                        <label for="telefone">Telefone:</label>
                         <input type="text" id="telefone" name="telefone" required placeholder="(65) 99999-9999">
         
         
                     <div class="form-group">
-                        <label for="cpf">Cpf:</label><a>...........................................</a>
+                        <label for="cpf">Cpf:</label>
                         <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
                     </div>
         
                     <div class="form-group">
-                        <label for="datanascimento">Data de Nascimento:</label><a>.................................</a>
+                        <label for="datanascimento">Data de Nascimento:</label>
                         <input type="date" id="datanascimento" name="datanascimento" onchange="calculateAge()" required>
                     </div>
         
                     <div class="form-group">
-                        <label for="idade">Idade:</label><a>..............................</a>
+                        <label for="idade">Idade:</label>
                         <input type="number" id="idade" name="idade" onchange="calculateAge()" required>
+                    
                     </div>
 
                     <div class="form-group">
-                        <label for="categoria">Categoria</label><a>............................</a>
+                        <label for="categoria">Categoria</label>
                         <select id="categoria" name="categoria" required>
-                            <option value="  "><title>----</title></option>
-                            <option value="Aluno IFMT">ALUNO IFMT</option>
-                            <option value="Professor IFMT">PROFESSOR IFMT</option>
+                            <option value="--------------">--------------</option>
+                            <option value="Aluno IFMT">Aluno IFMT</option>
+                            <option value="Professor IFMT">Professor IFMT</option>
                             <option value="Servidor IFMT">Servidor IFMT</option>
                             <option value="Comunidade Geral">Comunidade Geral</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="SubCategoria">SubCategoria</label><a>............................</a>
+                        <label for="SubCategoria">SubCategoria</label>
                         <input type="text" id="SubCategoria" name="SubCategoria" onchange="setSubCategoria()" required>
                             
                     </div>
-        
-                    <br/>
                     
                     <div class="form-group">
-                        <label> Leu as regras e aceita os termos para participar do evento?<a>..............................</a> </label>
+                        <label> Leu as regras e aceita os termos para participar do evento?</label>
                         <label><input type="radio" id="aceito" name="termo" value="1">Sim</label>
-                        <label><input type="radio" id="naoaceito" name="termo" value="0">Não</label>
                     </div>
-        
-                    <br/>
-                    
-                    <div>
 
-
-                    <a>..............................................</a>
-                    
+                    <div> 
                     <button type="submit" class="btn">Enviar</button>
-
                     </div>
 
+                    <div style="flex: 2"></div>
+
+
+                    footer {
+                        margin-top: 9.5%;
+                    }
+                    </div>
                 </form>
             </div>
-        
-            <form>
-                <div class="container5">
-                    <button2>
-                        <i class="fas fa-thumbs-up"></i> <img src = './images (1).jpg';>
-                    </button2>
-                        </div>
-            </form>
-        </body>
-        </html></td></br>
-
-        <td><div class="container7">
-            <i class="fas fa-thumbs-up"></i> <img src = './download.jpg';>
-        </div></td>
-        
-    </tr>
-    <tr>
-       
-        <td><br><a>................</a></br></td>
-    </tr>
-    
-</form>
-
-</table>
-<br><a>.................................</a><br>
+    </div>
+    </form>
 </body>
-</html>
+</html>       
