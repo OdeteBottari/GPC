@@ -8,23 +8,22 @@
 /* Estilos do corpo */
 body {
     display: flex;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, sans-serif;
     align-items: center;
-    margin: 50px;
+    margin: 30px;
     align-content: space-around;
     justify-content: center;
     margin-top: 20px;
     background-image: url('ifmt2024.jpg');
 }
 
-
 /* Container principal */
 .container {
-    padding: 22px;
+    padding: 5px;
     border-radius: 14px;
-    width: 80vw; /* Largura fixa para o formulário */
+    width: 120vw; /* Largura fixa para o formulário */
     margin-top: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(29, 158, 115);
 }
 
 
@@ -37,9 +36,9 @@ body {
 
 .form-group {
     background-color: #33887a;
-    padding: 20px;
+    padding: 100px;
     border-radius: 8px;
-    width: 80vw; /* Largura fixa para o formulário */
+    width: 100vw; /* Largura fixa para o formulário */
 
 }
 
@@ -47,8 +46,7 @@ body {
 .form-group label {
     text-align: center;
     font-family: Arial, sans-serif;
-    border-radius: 8px;
-    max-width: 113px;
+    max-width: 1px;
     width: 48%;
     text-align: left;
 }
@@ -65,8 +63,6 @@ h1 {
     margin-bottom: 30px;
     text-align: center;
     margin-top: 80%;
-
-
 }
 
 h2 {
@@ -76,15 +72,17 @@ h2 {
 
 /* Parágrafo */
 p {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 45px;
+    margin-bottom: 30px;
     text-align: center;
+    margin-top: 0.9%;
 }
 
 /* Estilos do grupo de formulário */
 .form-group {
     display: flex;
     flex-direction: column; /* Coloca os itens em coluna */
+    color:aliceblue;
 }
 
 /* Labels */
@@ -118,17 +116,18 @@ button {
 
 
 button:hover {
-    background-color: #54c26c; /* Azul mais escuro ao passar o mouse */
+    background-color: rgb(29, 158, 115); /* Azul mais escuro ao passar o mouse */
 }
 
 /* Link para recuperação de senha */
 a {
     text-align: center;
-    color: rgb(104, 135, 175); /* Azul padrão para links */
+    color: rgb(255, 255, 255); /* Azul padrão para links */
     
     text-decoration: none; /* Remove o sublinhado do link */
 }
 
 a:hover {
     text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    color:aquamarine;
 }
